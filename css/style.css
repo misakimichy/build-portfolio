@@ -1,0 +1,19 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.menu {
+    text-decoration: none;
+}
+
+
+@media screen and (min-width: 500px) {
+
+}
+
+@media screen and (min-width: 850px) {
+    .menu {
+        display: block;
+    }
+}
