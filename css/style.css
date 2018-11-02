@@ -69,6 +69,7 @@ the menu should start from the bottom of three bars when I click the menu. */
 
 .menu ul {
     padding: 0;
+    margin-top: 25px;
     list-style: none;
 }
 
@@ -82,6 +83,8 @@ the menu should start from the bottom of three bars when I click the menu. */
     color: var(--dark);
     text-decoration: none;
     font-size: 1.2rem;
+    padding-top: 2rem;
+    padding-left: 1rem;
     text-transform: uppercase;
     opacity: 0;
     transition: opacity 200ms ease-in-out;
@@ -109,10 +112,12 @@ the menu should start from the bottom of three bars when I click the menu. */
     position: absolute;
     top: 0;
     left: 0;
-    margin-left: 1em;
     height: 100%;
     display: flex;
     align-items: center;
+    padding: 1rem;
+    margin-left: 1em;
+    cursor: pointer;
 }
 
 .menu-toggle-label span,
@@ -123,7 +128,7 @@ the menu should start from the bottom of three bars when I click the menu. */
     position: relative;
     height: 4px;
     width: 2.5em;
-    border-radius: 5px;    
+    border-radius: 4px;    
 }
 
 .menu-toggle-label span::before,
@@ -151,8 +156,7 @@ p {
 /* TODO: Style about me section */
 .about-me {
     background-color: var(--middleblue);
-    padding: 2rem;
-    width: 100%;
+    padding: 4rem 2rem 2rem;
 }
 
 .about-me p {
@@ -161,6 +165,8 @@ p {
     font-size: 1.7rem;
     font-weight: 600;
 }
+
+/* TODO: Turn my name as a logo */
 
 
 /* TODO: Style my wotk section */
@@ -199,6 +205,7 @@ p {
 
 .description {
     font-size: 1.2rem;
+    padding-bottom: 1.5rem;
 }
 
 /* TODO: Style contact me section */
@@ -211,33 +218,40 @@ p {
     margin: 0;
 }
 
-input[type="text"] {
-    width: 80%;
-    padding: 0.7rem;
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+input[type="text"],
+input[type="textarea"] {
+    padding: 0.6rem;
     border: 1px solid var(--darkblue);
     border-radius: 4px;
-    resize: vertical;
+}
+
+input[type="text"] {
+    max-width: 350px;
 }
 
 input[type="textarea"] {
-    width: 80%;
-    height: 100px;
-    border: 1px solid var(--darkblue);
-    border-radius: 4px;
-
+    height: 200px;
+    max-width: 450px;
 }
 
 input[type="submit"] {
     background-color: var(--middleblue);
-    padding: 0.5rem;
+    margin-top: 1rem;
+    padding: 0.4em;
+    width: 80px;
     border: none;
     border-radius: 4px;
     cursor: pointer;
-
 }
 
 input[type="submit"]:hover {
     background-color: var(--lightblue);
+    box-shadow: 10px 5px 10px rgba(0, 0, 0, 0.3);
 }
 
 /* TODO: style footer */
@@ -253,41 +267,93 @@ footer p {
 } 
 
 /* TODO: make @media menu */
-@media screen and (min-width: 500px) {
-
-} 
-
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 650px) {
     header {
         position: static;
-        display: grid;
-        grid-template-columns: 1fr auto 1fr;
-        height: 4rem;
+        height: 10vh;
     }
 
     .menu {
         all: unset;
-        grid-template-columns: 2 / 3;
-        display: flex;
-        justify-content: flex-end;
-        align-items: center;
     }
 
     .menu ul {
-        display: flex;
-        justify-content: flex-end;
+        margin: 0;
+        width: 100%;
+        height: 10vh;
+        display: inline-flex;
+        justify-content: space-evenly;
+        align-items: center;
     }
 
-    .menu ul li {
-        margin-left: 5em;
-        margin-bottom: 0;
+    .menu li {
+        margin: 0;
     }
 
     .menu a {
         opacity: 1;
+        padding: 0;
     }
 
     .menu-toggle-label {
         display: none;
+    }
+    
+    .about-me p {
+        font-size: 2rem;
+    }
+
+    .about-me img {
+        width: 40px;
+    }
+}
+
+@media screen and (min-width: 801px) {
+    body {
+        background-color: var(--dark);
+    }
+
+    .menu ul {
+        width: 85%;
+    }
+
+    .home {
+        width: 85%;
+        margin: 0 auto;
+    }
+    
+    .about-me {
+        font-size: 3rem;
+    }
+
+    .references {
+        display: grid;
+        grid-template-columns: 45% 45%;
+        grid-template-rows: 10vh auto;
+        grid-gap: 15px;
+    }
+
+    .references h2 {
+        grid-column: 1 / 3;
+    }
+
+    .description {
+        padding: 0;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .home {
+        width: 85%;
+        margin: 0 auto;
+        font-size: 2.5rem;
+    }
+
+    .about-me {
+        font-size: 3.5rem;
+    }
+    
+    .references {
+        grid-gap: 30px;
     }
 }
