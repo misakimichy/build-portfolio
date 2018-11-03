@@ -12,9 +12,9 @@
             <nav class="menu">
                 <ul>
                     <li><a href="#" >Home</a></li>
-                    <li><a href="#" >My Work</a></li>
-                    <li><a href="#" >References</a></li>
-                    <li><a href="#" >Contact Me</a></li>
+                    <li><a href="#my-work" >My Work</a></li>
+                    <li><a href="#bookshelf" >Bookshelf</a></li>
+                    <li><a href="#contact" >Contact Me</a></li>
                 </ul>
             </nav>
             <label for="menu-toggle" class="menu-toggle-label">
@@ -23,29 +23,34 @@
         </header>
         <main class="home">
             <div class="about-me">
-                <p>Hello. I am <a href="https://www.linkedin.com/in/misaki-koonce/"><img src="img/linkedin-logo.png" alt="linkedIn"></a>Misaki Koonce.</p>
-                <p>I am Front-End Web Developer in &nbsp;<a href="https://www.seattle.gov"><img src="img/seattle.png"></a>Seattle.</p>
-                <p>I've decided to change my career to become a front-end web dev.</p>
-                <p>Now I'm taking a Front-end Web Developer Nanodegree Program by <a href="https://udacity.com"><img src="img/udacity-logo.jpeg" alt="Udacity logo"></a>Udacity.</p>
+                <p>Hello. I'm <a href="https://www.linkedin.com/in/misaki-koonce/"></a><span id="logo">Misaki Koonce</span>, a Front-End Web Developer in <span id="seattle"><a href="https://www.seattle.gov"><img src="img/seattle.png"></a>Seattle.</span> I'm currently taking the Front-End Web Developer Nanodegree Program by <span id="udacity"><a href="https://udacity.com"><img src="img/udacity-logo.jpeg" alt="Udacity logo"></a>Udacity.</span></p>
             </div>
-            <div class="my-work">
+            <div class="my-work" id="my-work">
                 <h2>My Work</h2>
                 <p>The contents are coming soon...</p>
             </div>
-            <div class="references">
-                <h2>References for study</h2>
-                <div class="books">
-                    <p class="title">HTML & CSS design and build websites by <em>Jon Duckett</em></p>
-                    <img src="img/html-and-css-book.jpg" alt="HTML & CSS by Jon Duckett">
-                    <p class="description">The design of the book is really beautiful. I recommend this book for someone who just started learning or someone who want to brush up HTML and CSS knowledge.</p>                    
-                </div>
-                <div class="books">
-                    <p class="title">Responsive Web Design 2nd Edition by <em>Chris Ward</em></p>
-                    <img src="img/responsive.jpg" alt="responsive web design by Chris Ward">
-                    <p class="description">The conceppt of responsive design is really powerful and it's necessary to understand it as a front-end web developer. </p>
+            <div class="bookshelf" id="bookshelf">
+                <h2>Bookshelf</h2>
+                <div class="grid">
+                    <div class="books">
+                        <p class="title">HTML & CSS design and build websites by <em>Jon Duckett</em></p>
+                        <p class="description"><img src="img/html-and-css-book.jpg" alt="HTML & CSS by Jon Duckett">The design of the book is really beautiful. I recommend this book for someone who just started learning or someone who want to brush up HTML and CSS knowledge.</p>                    
+                    </div>
+                    <div class="books">
+                        <p class="title">Responsive Web Design 2nd Edition by <em>Chris Ward</em></p>
+                        <p class="description"><img src="img/responsive.jpg" alt="responsive web design by Chris Ward">The conceppt of responsive design is really powerful and it's necessary to understand it as a front-end web developer. </p>
+                    </div>
+                    <div class="books">
+                        <p class="title"> The Linux Command Line: A Complete Introduction by <em>William E. Shotts. Jr.</em></p>
+                        <p class="description"><img src="img/linux-command-line.jpg" alt="The Linux Command Line">This book is easy for people who are even new to the command line. It's easy to find command line instructions on Youtube or tech blogs nowadays but it's worth reading. Let me say that this book is more like a learning book not a reference book.</p>
+                    </div>
+                    <div class="books">
+                        <p class="title"> Above the Fold: Understanding the Principales of Successful Web Site Design by <em>Brian D. Miller</em></p>
+                        <p class="description"><img src="img/above-the-fold.jpg" alt="Above the Fold by Brian D. Miller">If you are studying web design or studying about font-end web developer, this book is helpful.</p>
+                    </div>
                 </div>
             </div>
-            <div class="contact">
+            <div class="contact" id="contact">
                 <h2>Contact Me</h2>
                 <form>
                     <input type="text" id="yourname" name="yourname" placeholder="Your name">
